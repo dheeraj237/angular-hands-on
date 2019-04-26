@@ -1,2 +1,2 @@
 # angular-hands-on
-repository for angular hands on projects filles
+so called angular hands on practice project named `tour of heroes`
