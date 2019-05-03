@@ -21,6 +21,7 @@ export class LoginComponent implements OnInit {
       })
   }
 
+
   login(pltfrm) {
     console.log('Login...');
     this.service.login(pltfrm);
