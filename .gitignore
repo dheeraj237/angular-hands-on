@@ -5,6 +5,7 @@
 /*/tmp
 /*/out-tsc
 /*/e2e
+/*/src/environments
 
 # dependencies
 /*/node_modules
