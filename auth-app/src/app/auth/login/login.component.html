@@ -1,9 +1,16 @@
-<div class="container"><br>
+<!-- <div class="container"><br>
   Logged in as => {{user?.displayName}}
-</div><br>
-<button *ngIf="!user" (click)="loginGoogle()">
-  Login With Google
-</button>
-<button *ngIf="user" (click)="logout()">
+</div><br> -->
+<div class="container">
+  <br>
+  <button mat-flat-button color="primary" *ngIf="!user" class="loginButton" (click)="login('google')">
+    Login With Google
+  </button><br>
+  <button mat-flat-button color="primary" *ngIf="!user" class="loginButton" (click)="login('github')">
+    Login With Github
+  </button>
+</div>
+
+<!-- <button *ngIf="user" (click)="logout()">
   Logout
-</button>
+</button> -->

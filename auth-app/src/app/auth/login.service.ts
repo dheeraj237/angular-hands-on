@@ -11,9 +11,13 @@ export class LoginService {
     private afAuth: AngularFireAuth
   ) { }
 
-  login() {
+  login(pltfrm) {
     console.log('redirect to login provider....')
-    this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider);
+    if (pltfrm === 'google') {
+      this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider);
+    } else if (pltfrm === 'github') {
+      this.afAuth.auth.signInWithRedirect(new auth.GithubAuthProvider);
+    }
   }
 
   getLoggedInUser() {

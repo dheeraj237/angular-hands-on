@@ -17,14 +17,13 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
     this.service.getLoggedInUser()
       .subscribe(user => {
-        // console.log(user)
         this.user = user;
       })
   }
 
-  loginGoogle() {
+  login(pltfrm) {
     console.log('Login...');
-    this.service.login();
+    this.service.login(pltfrm);
   }
 
   logout() {
