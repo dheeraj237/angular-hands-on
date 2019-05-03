@@ -9,6 +9,8 @@ import { AngularFireAuth } from '@angular/fire/auth';
 export class AppComponent {
   // title = 'auth-app';
 
+  user: firebase.User;
+
   constructor(
     private afAuth: AngularFireAuth
   ) { }
@@ -16,6 +18,7 @@ export class AppComponent {
   ngOnInit() {
     this.afAuth.authState.subscribe(user => {
       console.log('%c Authenticated ', 'background-color:green;color:white', user)
+      this.user = user;
     })
   }
 

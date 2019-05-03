@@ -16,4 +16,12 @@ export class LoginService {
     this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider);
   }
 
+  getLoggedInUser() {
+    return this.afAuth.authState;
+  }
+
+  logout() {
+    this.afAuth.auth.signOut();
+  }
+
 }
