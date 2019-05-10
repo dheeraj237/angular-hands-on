@@ -13,6 +13,12 @@ export class AppComponent {
     "Djnago",
     "Nodejs",
     "SQL",
+    "Nodejs",
+    "SQL",
+    "Nodejs",
+    "SQL",
+    "Nodejs",
+    "SQL",  
     "Angular"
   ]
 

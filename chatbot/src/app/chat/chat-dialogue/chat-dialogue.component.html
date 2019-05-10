@@ -1,0 +1,39 @@
+<!-- <h1>Angular Bot</h1> -->
+<div id="convoContainer" class="container" style="margin-bottom: 75px;">
+  <table id="" class="message" *ngFor="let message of messages | async">
+    <tr>
+      <!-- My message -->
+      <td>
+        <div class="bubble" [ngClass]="{ 'from': message.sentBy === 'bot',
+                                            'to':   message.sentBy === 'user' }">
+          {{ message.content }}
+        </div>
+      </td>
+    </tr>
+
+    <!-- Component iterator (Dialogflow Gateway Feature) -->
+  </table>
+</div>
+
+<!-- <ng-container id="convoContainer" *ngFor="let message of messages | async">
+
+  <div class="bubble" [ngClass]="{ 'from': message.sentBy === 'bot',
+                                    'to':   message.sentBy === 'user' }">
+    {{ message.content }}
+  </div>
+
+</ng-container> -->
+<div id="bottomInput" #bottomInput class="chat-footer">
+  <div class="suggestion">
+
+  </div>
+  <mat-form-field appearance="standard" style="width: 96%;">
+    <!-- <mat-label>Standard form field</mat-label> -->
+    <input matInput autocomplete="off" style="margin-bottom: 0px;" [(ngModel)]="formValue" (keyup.enter)="sendMessage()"
+      type="text" placeholder="Say Hi, to get started with bot.">
+    <mat-icon matSuffix (click)="sendMessage()" matTooltip="Send Messsage">send</mat-icon>
+    <!-- <mat-hint>Hint</mat-hint> -->
+  </mat-form-field>
+</div>
+
+<!-- <label for="nameField">Your Message</label> -->

@@ -9,10 +9,9 @@ import {
     MatBadgeModule,
     MatCardModule,
     MatFormFieldModule,
-    MatLabel,
     MatInputModule
 } from '@angular/material';
-import { MissingTranslationStrategy } from '@angular/compiler/src/core';
+
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
