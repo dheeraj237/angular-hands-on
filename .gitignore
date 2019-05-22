@@ -5,7 +5,10 @@
 /*/tmp
 /*/out-tsc
 /*/e2e
+
+# Secured Files
 /*/src/environments
+/*/package-lock.json
 
 # dependencies
 /*/node_modules
