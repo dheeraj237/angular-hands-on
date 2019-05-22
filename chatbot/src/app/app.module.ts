@@ -8,11 +8,17 @@ import { AppComponent } from './app.component';
 import { ChatModule } from './chat/chat.module';
 
 import { MaterialModule } from './material-module';
+import { AboutComponent } from './about/about.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
+//Global var
+import { Globals } from './globals';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
@@ -20,9 +26,10 @@ import { MaterialModule } from './material-module';
     BrowserAnimationsModule,
     // NoopAnimationsModule,
     MaterialModule,
-    ChatModule
+    ChatModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
-  providers: [],
+  providers: [Globals],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,4 +1,18 @@
 import { NgModule } from '@angular/core';
+import { MAT_DATE_FORMATS, DateAdapter, MAT_DATE_LOCALE } from '@angular/material';
+import { MomentDateAdapter } from '@angular/material-moment-adapter';
+
+export const MY_FORMATS = {
+    parse: {
+        dateInput: 'LL',
+    },
+    display: {
+        dateInput: 'DD-MMM-YYYY',
+        monthYearLabel: 'YYYY',
+        dateA11yLabel: 'LL',
+        monthYearA11yLabel: 'YYYY',
+    },
+};
 
 import {
     MatToolbarModule,
@@ -9,7 +23,10 @@ import {
     MatBadgeModule,
     MatCardModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatSelectModule
 } from '@angular/material';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -26,7 +43,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
         MatCardModule,
         FormsModule,
         MatInputModule,
-        MatFormFieldModule
+        MatFormFieldModule,
+        MatDatepickerModule,
+        MatNativeDateModule,
+        MatSelectModule
     ],
     exports: [
         MatToolbarModule,
@@ -38,7 +58,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
         MatCardModule,
         FormsModule,
         MatInputModule,
-        MatFormFieldModule
+        MatFormFieldModule,
+        MatDatepickerModule,
+        MatNativeDateModule,
+        MatSelectModule
+    ],
+    providers: [
+        { provide: DateAdapter, useClass: MomentDateAdapter, deps: [MAT_DATE_LOCALE] },
+        { provide: MAT_DATE_FORMATS, useValue: MY_FORMATS },
     ]
 })
 

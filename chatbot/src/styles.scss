@@ -33,14 +33,13 @@ body {
     width: 100%;
     border-radius: 0;
     text-align: left;
-    // padding: 10px;
-    padding-left: 15px;
 }
 #sidenav .menu-item :hover {
     background:#eee;
 }
 #sidenav .menu-item mat-icon {
     margin-right: 20px;
+    margin-left: 15px;
 }
 .dash-list h3{
     padding: 15px;
@@ -59,3 +58,16 @@ body {
 #bottomInput .mat-form-field-flex {
     padding-top: 0px;
 }
+
+.mat-select-panel {
+    min-width: 112px;
+    max-width: 280px;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 0;
+    padding-bottom: 0;
+    max-height: 256px;
+    min-width: 100%;
+    border-radius: 4px;
+}
+
