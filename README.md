@@ -13,6 +13,8 @@ Refrence - [https://angular.io/tutorial](https://angular.io/tutorial)
 
 ## auth-app
 
+### Sample changes
+
 Basic authentication application with google firebase. firebase environment variable should be added in environment file to run this project. 
 
 Refrence - [https://angularfirebase.com/lessons/google-user-auth-with-firestore-custom-data/](https://angularfirebase.com/lessons/google-user-auth-with-firestore-custom-data/)
